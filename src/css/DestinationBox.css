@@ -1,0 +1,117 @@
+/* Importing fonts and normalize.css */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import 'normalize.css';
+
+/* Global Styles */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --x: 0;
+    --y: 0;
+    --blur-layers: 5;
+    --blur-max: 30px;
+    --blur-stop: 15px;
+    --color-line: color-mix(in lch, canvasText 25%, transparent);
+    --line-size: 60px;
+    --font-main: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+    --font-title: 'Bebas Neue', sans-serif;
+}
+
+html {
+    color-scheme: light only;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100svh;
+    margin: 0;
+    padding: 0.5rem;
+    font-family: var(--font-main);
+    touch-action: none;
+    background-color: #f8f8f8;
+}
+
+/* Article Container */
+.article {
+    width: 400px;
+    aspect-ratio: 2 / 1.1;
+    max-height: calc(100svh - 2rem);
+    max-width: calc(100% - 2rem);
+    position: relative;
+    overflow: hidden;
+    border-radius: 4em;
+	margin: 1rem;
+	background: linear-gradient(45deg, #f8f8f8, #e8e8e8);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(20px);
+	transition: transform 0.5s;
+	will-change: transform;
+	touch-action: none;
+}
+
+@media (orientation: portrait) {
+    .article {
+        min-height: 330px;
+    }
+}
+
+/* Image and Title Styling */
+.assets {
+    position: absolute;
+    inset: 0;
+    border-radius: 4em;
+    overflow: hidden;
+}
+
+.assets img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 660px;
+    object-fit: cover;
+    object-position: center 43%;
+    user-select: none;
+    pointer-events: none;
+    filter: saturate(1.5) brightness(0.9);
+}
+
+.city-header {
+    top: 6%;
+    left: 50%;
+    margin: 0;
+    font-size: 4rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--font-title);
+}
+
+/* Content Styling */
+.content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    display: grid;
+    gap: 0.2rem;
+    place-items: center;
+    align-content: center;
+    padding-bottom: 0.5rem;
+    z-index: 2;
+}
+
+.content p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    position: relative;
+}
