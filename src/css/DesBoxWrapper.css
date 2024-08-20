@@ -1,0 +1,58 @@
+:root {
+    --x: 0;
+    --y: 0;
+    --blur-layers: 5;
+    --blur-max: 30px;
+    --blur-stop: 15px;
+    --color-line: color-mix(in lch, canvasText 25%, transparent);
+    --line-size: 60px;
+    --font-main: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+    --font-title: 'Bebas Neue', sans-serif;
+}
+
+
+h2 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+    color: black;
+}
+
+/* Structure */
+.container {
+    display: flex;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    justify-content: center;
+    padding: 1rem;
+    max-width: 1200px; /* Adjust width according to your design */
+    margin: 0 auto; /* Center the container */
+}
+
+.grid-view {
+    display: grid;
+}
+
+/* Animation */
+@keyframes blogAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Blog Content Styling */   
+.blog-content {
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin-top: 20px;
+    border-radius: 8px;
+    animation: blogAppear 0.3s ease-in-out;
+}

@@ -1,8 +1,8 @@
 import '../css/DestinationBox.css';
 
-const DestinationBox = ({ country, city, img }) => {
+const DestinationBox = ({ country, city, img, blog, onClick }) => {
     return (
-        <div className='article'>
+        <div className='article' onClick={onClick}>
             <div className='assets'>
                 <img src={img} />
             </div>

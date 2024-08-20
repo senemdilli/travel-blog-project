@@ -5,8 +5,15 @@ import Header from './components/Header';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <DesBoxWrapper />
+      <main>
+        <Header />
+        <div className='intro-wrapper'>
+          <p>Welcome to our travel blog!</p>
+        </div>
+        <div className='content-wrapper'>
+          <DesBoxWrapper />
+        </div>
+      </main>
     </div>
   );
 }

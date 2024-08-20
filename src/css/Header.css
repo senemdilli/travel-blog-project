@@ -1,5 +1,4 @@
 /* Importing fonts and normalize.css */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import 'normalize.css';
 
 :root {
@@ -19,12 +18,18 @@ body {
     background-color: #f8f8f8;
 }
 
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+
 .header {
     top: 6%;
     left: 50%;
     margin: 0;
-    font-size: 4rem;
-    color: white;
+    font-size: 6rem;
     text-transform: uppercase;
     font-family: var(--font-title);
 }
