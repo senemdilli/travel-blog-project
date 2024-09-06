@@ -1,0 +1,30 @@
+.arrow-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.arrow-button:hover .arrow-icon {
+    stroke: #007bff; 
+}
+
+.arrow-button:active .arrow-icon {
+    transform: translate(2px, 2px); 
+}
+
+.arrow-button:focus .arrow-icon {
+    stroke: #0056b3;
+}

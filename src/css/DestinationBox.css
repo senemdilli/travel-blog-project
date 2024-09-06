@@ -1,50 +1,19 @@
-/* Global Styles */
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
-}
-
 :root {
-    --x: 0;
-    --y: 0;
-    --blur-layers: 5;
-    --blur-max: 30px;
-    --blur-stop: 15px;
-    --color-line: color-mix(in lch, canvasText 25%, transparent);
-    --line-size: 60px;
     --font-main: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
     --font-title: 'Bebas Neue', sans-serif;
-}
-
-html {
-    color-scheme: light only;
-}
-
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100svh;
-    margin: 0;
-    padding: 0.5rem;
-    font-family: var(--font-main);
-    touch-action: none;
-    background-color: #f8f8f8;
 }
 
 /* Article Container */
 .article {
     width: 400px;
     aspect-ratio: 2 / 1.1;
-    max-height: calc(100svh - 2rem);
-    max-width: calc(100% - 2rem);
+    min-width: 400px;
     position: relative;
     overflow: hidden;
     border-radius: 4em;
 	margin: 1.5rem;
 	background: linear-gradient(45deg, #f8f8f8, #e8e8e8);
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.10);
 	backdrop-filter: blur(20px);
 	transition: transform 0.5s;
 	will-change: transform;
@@ -68,7 +37,9 @@ body {
     inset: 0;
     border-radius: 4em;
     overflow: hidden;
+    cursor: pointer;
 }
+
 
 .assets img {
     position: absolute;

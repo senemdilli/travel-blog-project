@@ -4,7 +4,6 @@
 }
 
 body {
-  display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100svh;
@@ -12,8 +11,7 @@ body {
   padding: 0.5rem;
   font-family: var(--font-main);
   touch-action: none;
-  background-color: #f8f8f8;
-}
+  background-color: #f8f8f8;}
 
 .intro-wrapper {
   margin-bottom: 50px;
@@ -30,4 +28,14 @@ p {
 
 .App-link {
   color: #61dafb;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  margin: 0 auto;
 }

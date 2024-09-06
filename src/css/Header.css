@@ -6,18 +6,6 @@
     --font-title: 'Bebas Neue', sans-serif;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100svh;
-    margin: 0;
-    padding: 0.5rem;
-    font-family: var(--font-main);
-    touch-action: none;
-    background-color: #f8f8f8;
-}
-
 .header-wrapper {
     display: flex;
     align-items: center;
