@@ -1,6 +1,3 @@
-/* Importing fonts and normalize.css */
-@import 'normalize.css';
-
 :root {
     --font-main: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
     --font-title: 'Bebas Neue', sans-serif;

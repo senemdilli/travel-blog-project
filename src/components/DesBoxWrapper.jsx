@@ -4,10 +4,14 @@ import ForwardButton from './ForwardButton';
 import BackwardButton from './BackwardButton';
 import '../css/DesBoxWrapper.css';
 import { DESTINATION_DATA } from '../utils/index.js';
+import Maps from './Maps';
+
+
 
 const DesBoxWrapper = () => {
     const [selectedDestination, setSelectedDestination] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [slideDirection, setSlideDirection] = useState(null);
 
     const handleDestinationClick = (destination) => {
         if (selectedDestination && selectedDestination.city === destination.city) {
@@ -20,39 +24,59 @@ const DesBoxWrapper = () => {
     const visibleBoxes = 3; // Number of boxes visible at one time
 
     const handleNext = () => {
-        if (currentIndex < DESTINATION_DATA.length - visibleBoxes) {
-            setCurrentIndex(currentIndex + 1);
-        }
+        setSlideDirection('left');
+        setTimeout(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % DESTINATION_DATA.length);
+            setSlideDirection(null); // Reset slide direction after transition
+        }, 500); // Match the CSS transition time (0.5s)
     };
 
     const handlePrev = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-        }
+        setSlideDirection('right');
+        setTimeout(() => {
+            setCurrentIndex((prevIndex) => 
+                (prevIndex - 1 + DESTINATION_DATA.length) % DESTINATION_DATA.length
+            );
+            setSlideDirection(null); // Reset slide direction after transition
+        }, 500); // Match the CSS transition time (0.5s)
     };
 
+    const getVisibleBoxes = () => {
+        if (currentIndex + visibleBoxes <= DESTINATION_DATA.length) {
+            return DESTINATION_DATA.slice(currentIndex, currentIndex + visibleBoxes);
+        } else {
+            const endPart = DESTINATION_DATA.slice(currentIndex);
+            const startPart = DESTINATION_DATA.slice(0, (currentIndex + visibleBoxes) % DESTINATION_DATA.length);
+            return [...endPart, ...startPart];
+        }
+    };
+    
+
     return (
-        <div className="container">
-            <div className="des-box-wrapper">
-                {DESTINATION_DATA.slice(currentIndex, currentIndex + visibleBoxes).map((dest) => (
-                    <DestinationBox 
+        <>
+            <div className="container">
+                <div className={`des-box-wrapper ${slideDirection ? 'sliding' : ''}`}>
+                    {getVisibleBoxes().map((dest, index) => (
+                        <div 
                         key={dest.city} 
-                        {...dest} 
-                        onClick={() => handleDestinationClick(dest)} 
-                    />
-                ))}
-            </div>
-            <div className='arrow-buttons'>
-                <BackwardButton onClick={handlePrev} />
-                <ForwardButton onClick={handleNext} />
-            </div>
-            {selectedDestination && (
-                <div className="blog-content">
-                    <h2>{selectedDestination.city}</h2>
-                    <p>{selectedDestination.blog}</p>
+                        className={`des-box ${slideDirection === 'left' ? 'slide-left' : slideDirection === 'right' ? 'slide-right' : ''}`}>
+                            <DestinationBox {...dest} onClick={() => handleDestinationClick(dest)} />
+                        </div>
+                    ))}
                 </div>
-            )}
-        </div>
+                <div className='arrow-buttons'>
+                    <BackwardButton onClick={handlePrev} />
+                    <ForwardButton onClick={handleNext} />
+                </div>
+                {selectedDestination && (
+                    <div className="blog-content">
+                        <h2>{selectedDestination.city}</h2>
+                        <p>{selectedDestination.blog}</p>
+                    </div>
+                )}
+            </div>
+            <Maps destination={selectedDestination} />
+        </>
     );
     
 };

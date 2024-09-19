@@ -37,10 +37,6 @@ p {
     -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
 }
 
-.des-box-wrapper {
-    scroll-snap-type: x mandatory;
-}
-
 .destination-box {
     flex: 0 0 calc(33.333% - 1rem); /* 3 boxes with equal width, accounting for gap */
     height: 150px;

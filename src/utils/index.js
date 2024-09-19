@@ -7,3 +7,12 @@ export const DESTINATION_DATA = [
     { country: 'USA', city: 'New York', img: './images/new-york.jpg', blog: 'New York is not the capital of the USA.' },
     { country: 'Japan', city: 'Tokyo', img: './images/tokyo.jpg', blog: 'Tokyo is the capital of Japan.' },
 ];
+
+/* export const MAPS_DATA = [
+    { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=1W4UQzFGYeQtj9ME4UipjP4-sAp9o6r4&ehbc=2E312F', city: 'Berlin' },
+    { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=1Qr4xq1sEe8I8p2-05EWpmtJboVUZ4bA&ehbc=2E312F', city: 'Vienna' }
+]; */
+export const MAPS_DATA = {
+    'Berlin': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=1W4UQzFGYeQtj9ME4UipjP4-sAp9o6r4&ehbc=2E312F', city: 'Berlin' },
+    'Vienna': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=1Qr4xq1sEe8I8p2-05EWpmtJboVUZ4bA&ehbc=2E312F', city: 'Vienna' }
+}; 
