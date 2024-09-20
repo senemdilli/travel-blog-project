@@ -1,13 +1,14 @@
 import './App.css';
 import DesBoxWrapper from './components/DesBoxWrapper';
 import Header from './components/Header';
-import Navigation from './components/Navigation';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer'; 
 
 function App() {
   return (
     <div className="App">
       <main>
-        <Navigation />
+        <Navbar />
         <Header />
         <div className='intro-wrapper'>
           <p>Welcome to our travel blog!</p>
@@ -16,6 +17,7 @@ function App() {
           <DesBoxWrapper />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

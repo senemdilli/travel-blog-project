@@ -3,7 +3,7 @@ import DestinationBox from './DestinationBox';
 import ForwardButton from './ForwardButton';
 import BackwardButton from './BackwardButton';
 import '../css/DesBoxWrapper.css';
-import { DESTINATION_DATA } from '../utils/index.js';
+import { DESTINATION_DATA } from '../utils/data.js';
 import Maps from './Maps';
 
 

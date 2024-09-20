@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { MAPS_DATA } from '../utils/index.js';
+import { MAPS_DATA } from '../utils/data.js';
 
 const Maps = ({ destination }) => {
 
@@ -13,7 +13,7 @@ const Maps = ({ destination }) => {
           <iframe
             src={MAPS_DATA?.[destination?.city]?.mapsrc}
             width="1250"
-            height="500"
+            height="600"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
