@@ -1,3 +1,4 @@
+import React from 'react';
 import '../css/DestinationBox.css';
 
 const DestinationBox = ({ country, city, img, blog, onClick }) => {

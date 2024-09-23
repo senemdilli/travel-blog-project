@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 import { MAPS_DATA } from '../utils/data.js';
 

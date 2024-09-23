@@ -1,24 +1,22 @@
-import './App.css';
-import DesBoxWrapper from './components/DesBoxWrapper';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer'; 
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar'; 
 
-function App() {
+// Pages
+import Home from './Home';
+import Blog from './Blog';
+import About from './About';
+
+const App = () => {
   return (
-    <div className="App">
-      <main>
-        <Navbar />
-        <Header />
-        <div className='intro-wrapper'>
-          <p>Welcome to our travel blog!</p>
-        </div>
-        <div className='content-wrapper'>
-          <DesBoxWrapper />
-        </div>
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+      </Routes>
+    </Router>
   );
 }
 
