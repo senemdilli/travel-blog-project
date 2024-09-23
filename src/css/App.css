@@ -39,3 +39,15 @@ main {
   width: 95%;
   margin: 0 auto;
 }
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-family: var(--font-main);
+  font-size: 1em;
+}
+
+.link:hover {
+  color: #306F5D;
+  font-weight: 700;  
+}

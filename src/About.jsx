@@ -1,7 +1,6 @@
 import React from 'react';
 import './css/App.css';
 import Header from './components/Header';
-import Navbar from './components/Navbar';
 import Footer from './components/Footer'; 
 
 function About() {
@@ -10,7 +9,9 @@ function About() {
       <main>
         <Header />
         <div className='intro-wrapper'>
-          <p>Developed by Senem Dilli 🦦</p>
+          <p>
+            Developed by <a href="https://www.bento.me/senemdilli" target="_blank" rel="noopener noreferrer" className="link">Senem Dilli</a> 🦦
+          </p>
         </div>
       </main>
       <Footer />

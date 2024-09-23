@@ -7,9 +7,9 @@ const Footer = () => {
         <footer className='footer-wrapper'>
             <div className='footer-content'>
                 <ul className='footer-list'>
-                <li className='nav-item'><Link to="/">home</Link></li>
-                <li className='nav-item'><Link to="/blog">blog</Link></li>
-                <li className='nav-item'><Link to="/about">about</Link></li>
+                <li className='footer-item'><Link to="/">home</Link></li>
+                <li className='footer-item'><Link to="/blog">blog</Link></li>
+                <li className='footer-item'><Link to="/about">about</Link></li>
                 </ul>
             </div>
             <p>&copy; 2024 Traveler App</p>
