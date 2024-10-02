@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Home from './Home';
 import Blog from './Blog';
 import About from './About';
+import ChatUI from './components/ChatUI';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path='/assistant' element={<ChatUI />} />
       </Routes>
     </Router>
   );

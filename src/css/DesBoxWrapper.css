@@ -1,8 +1,4 @@
-:root {
-    --font-title: 'Bebas Neue', sans-serif;
-}
-
-h2 {
+.city-header {
     font-family: var(--font-title);
     font-size: 2rem;
 }

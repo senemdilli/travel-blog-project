@@ -1,21 +1,11 @@
 {
-  "short_name": "onepack",
-  "name": "onepack",
+  "short_name": "onepack.club",
+  "name": "onepack.club",
   "icons": [
     {
       "src": "backpack.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "backpack.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "backpack.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "96x96"  
     }
   ],
   "start_url": ".",

@@ -70,7 +70,7 @@ const DesBoxWrapper = () => {
                 </div>
                 {selectedDestination && (
                     <div className="blog-content">
-                        <h2>{selectedDestination.city}</h2>
+                        <h2 className="city-header">{selectedDestination.city}</h2>
                         <p>{selectedDestination.blog}</p>
                     </div>
                 )}

@@ -1,6 +1,7 @@
 :root {
-    --font-main: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
-    --font-title: 'Bebas Neue', sans-serif;
+  --font-main: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
+  --font-title: 'Bebas Neue', sans-serif;
+  --color-green: #306F5D;
 }
 
 body {
