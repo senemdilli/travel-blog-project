@@ -13,9 +13,7 @@ const Maps = ({ destination }) => {
         <div>
           <iframe
             src={MAPS_DATA?.[destination?.city]?.mapsrc}
-            width="1250"
-            height="600"
-            style={{ border: 0 }}
+            className='map'
             allowFullScreen=""
             loading="lazy"
           ></iframe>

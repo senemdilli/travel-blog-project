@@ -4,8 +4,7 @@ import '../css/Header.css';
 const Header = () => {
     return (
         <header className='header-wrapper'>
-            <h1 className='header'>onepack</h1>
-            {/* Add your navigation or other content here */}
+            <h1 className='header'>Welcome Traveler!</h1>
         </header>
     );
 };

@@ -6,12 +6,13 @@ import '../css/DesBoxWrapper.css';
 import { DESTINATION_DATA } from '../utils/data.js';
 import Maps from './Maps';
 
-
-
 const DesBoxWrapper = () => {
     const [selectedDestination, setSelectedDestination] = useState(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [slideDirection, setSlideDirection] = useState(null);
+
+    const visibleBoxes = 3; // Number of boxes visible at one time
+    const scrollAmount = 3; // Scroll 3 boxes at a time
 
     const handleDestinationClick = (destination) => {
         if (selectedDestination && selectedDestination.city === destination.city) {
@@ -21,12 +22,12 @@ const DesBoxWrapper = () => {
         }
     };
 
-    const visibleBoxes = 3; // Number of boxes visible at one time
-
     const handleNext = () => {
         setSlideDirection('left');
         setTimeout(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % DESTINATION_DATA.length);
+            setCurrentIndex((prevIndex) => 
+                (prevIndex + scrollAmount) % DESTINATION_DATA.length
+            );
             setSlideDirection(null); // Reset slide direction after transition
         }, 500); // Match the CSS transition time (0.5s)
     };
@@ -35,7 +36,7 @@ const DesBoxWrapper = () => {
         setSlideDirection('right');
         setTimeout(() => {
             setCurrentIndex((prevIndex) => 
-                (prevIndex - 1 + DESTINATION_DATA.length) % DESTINATION_DATA.length
+                (prevIndex - scrollAmount + DESTINATION_DATA.length) % DESTINATION_DATA.length
             );
             setSlideDirection(null); // Reset slide direction after transition
         }, 500); // Match the CSS transition time (0.5s)
@@ -50,7 +51,6 @@ const DesBoxWrapper = () => {
             return [...endPart, ...startPart];
         }
     };
-    
 
     return (
         <>
@@ -58,8 +58,9 @@ const DesBoxWrapper = () => {
                 <div className={`des-box-wrapper ${slideDirection ? 'sliding' : ''}`}>
                     {getVisibleBoxes().map((dest, index) => (
                         <div 
-                        key={dest.city} 
-                        className={`des-box ${slideDirection === 'left' ? 'slide-left' : slideDirection === 'right' ? 'slide-right' : ''}`}>
+                            key={dest.city} 
+                            className={`des-box ${slideDirection === 'left' ? 'slide-left' : slideDirection === 'right' ? 'slide-right' : ''}`}
+                        >
                             <DestinationBox {...dest} onClick={() => handleDestinationClick(dest)} />
                         </div>
                     ))}
@@ -74,11 +75,12 @@ const DesBoxWrapper = () => {
                         <p>{selectedDestination.blog}</p>
                     </div>
                 )}
+                {selectedDestination && (
+                    <Maps className="map" destination={selectedDestination} />
+                )}
             </div>
-            <Maps destination={selectedDestination} />
         </>
     );
-    
 };
 
 export default DesBoxWrapper;

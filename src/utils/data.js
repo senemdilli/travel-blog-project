@@ -22,5 +22,8 @@ export const MAPS_DATA = {
     'Prague': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=1E3UzOOB5jZ2jpgD89knRjYpZZAuL2t4&ehbc=2E312F', city: 'Prague' },
     'Copenhagen': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=1WNjCuRV2BPAx3YjclvzCg0eDyYbmRSc&ehbc=2E312F', city: 'Copenhagen' },
     'Istanbul': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=13ae2_ICNETWbSrD7rFVRF6yC5d3fAqU&ehbc=2E312F', city: 'Istanbul' },
-    'Dresden': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=17QDtK8cagmu3f8wZvzcc0wNBt02FFfw&ehbc=2E312F', city: 'Dresden' }
+    'Dresden': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=17QDtK8cagmu3f8wZvzcc0wNBt02FFfw&ehbc=2E312F', city: 'Dresden' },
+    'Barcelona': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=1W4UQzFGYeQtj9ME4UipjP4-sAp9o6r4&ehbc=2E312F', city: 'Barcelona' },
+    'Brussels': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=1W4UQzFGYeQtj9ME4UipjP4-sAp9o6r4&ehbc=2E312F', city: 'Brussels' },
+    'Paris': { mapsrc: 'https://www.google.com/maps/d/u/0/embed?mid=1W4UQzFGYeQtj9ME4UipjP4-sAp9o6r4&ehbc=2E312F', city: 'Paris' }
 }; 

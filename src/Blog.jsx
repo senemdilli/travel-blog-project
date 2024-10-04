@@ -7,9 +7,11 @@ function Blog() {
   return (
     <div className="App">
       <main>
-        <Header />
+      <Header />
         <div className='intro-wrapper'>
-          <p>This page has not developed yet.</p>
+          <p>
+            Developed by <a href="https://www.bento.me/senemdilli" target="_blank" rel="noopener noreferrer" className="link">Senem Dilli</a> 🦦
+          </p>
         </div>
       </main>
       <Footer />

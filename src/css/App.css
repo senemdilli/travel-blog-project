@@ -2,6 +2,10 @@
   --font-main: 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif, system-ui;
   --font-title: 'Bebas Neue', sans-serif;
   --color-green: #306F5D;
+  --color-blue: #352372;
+  --color-white: #f5f4f4;
+  --color-orange: #ff8a36;
+  --font-afacad: 'Afacaf Flux', sans-serif;
 }
 
 body {
@@ -12,7 +16,8 @@ body {
   padding: 0.5rem;
   font-family: var(--font-main);
   touch-action: none;
-  background-color: #f8f8f8;}
+  background-color: #fafafa;
+}
 
 .intro-wrapper {
   margin-bottom: 50px;
@@ -21,10 +26,7 @@ body {
 p {
   font-size: 1em;
   color: gray;
-}
-
-.App {
-  text-align: center;
+  font-family: var(--font-afacad);
 }
 
 .App-link {
