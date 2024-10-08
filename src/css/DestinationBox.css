@@ -19,10 +19,27 @@
     transform: scale(1.05);
 }
 
-/* Media Query for Portrait Orientation */
-@media (orientation: portrait) {
+/* Media Query for Mobile (Max width: 480px) */
+@media (max-width: 480px) {
     .article {
-        min-height: 330px;
+        width: 250px; /* Smaller width on mobile */
+        height: 150px;
+        min-width: 350px;
+        min-height: 250px;
+    }
+
+    .assets img {
+        width: 100%; /* Ensure the image scales properly */
+        height: auto;
+        object-position: center;
+    }
+
+    .city-header {
+        font-size: 2.5rem; /* Smaller font size for the city title */
+    }
+
+    .content p {
+        font-size: 1rem; /* Smaller font size for content */
     }
 }
 
@@ -34,7 +51,6 @@
     overflow: hidden;
     cursor: pointer;
 }
-
 
 .assets img {
     position: absolute;

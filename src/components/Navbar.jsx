@@ -25,16 +25,16 @@ const Navbar = () => {
             {/* Navigation List */}
             <ul className={isMenuOpen ? 'nav-list nav-list-mobile open' : 'nav-list'}>
                 <li className="nav-item">
-                    <Link to="/" onClick={toggleMenu}>Home</Link>
+                    <Link to="/" onClick={isMenuOpen ? toggleMenu : undefined}>Home</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/blog" onClick={toggleMenu}>Blog</Link>
+                    <Link to="/blog" onClick={isMenuOpen ? toggleMenu : undefined}>Blog</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/about" onClick={toggleMenu}>About</Link>
+                    <Link to="/about" onClick={isMenuOpen ? toggleMenu : undefined}>About</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/assistant" onClick={toggleMenu}>Assistant</Link>
+                    <Link to="/assistant" onClick={isMenuOpen ? toggleMenu : undefined}>Assistant</Link>
                 </li>
             </ul>
         </nav>

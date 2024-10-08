@@ -139,6 +139,8 @@ p {
         flex-direction: column; /* Stack boxes vertically on mobile */
         overflow: visible; /* Disable horizontal scrolling */
         align-items: center; /* Center the boxes */
+        padding-bottom: 0;
+        gap: 0;
     }
 
     .destination-box {
@@ -146,10 +148,12 @@ p {
         max-width: 100px; /* Add a max-width to limit how large the box gets */
         height: 100px; /* Adjust the height to be smaller */
         margin-bottom: 0.5rem;
+        padding-bottom: 0;
     }
 
     .blog-content {
         padding: 1rem;
+        width: 350px;
     }
 
     .city-header {
