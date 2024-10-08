@@ -12,7 +12,7 @@ const Footer = () => {
                 <li className='footer-item'><Link to="/about">about</Link></li>
                 </ul>
             </div>
-            <p>&copy; 2024 Traveler App</p>
+            <p>&copy; 2024 onepack.club</p>
         </footer>
     );
 };

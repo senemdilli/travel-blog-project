@@ -54,7 +54,7 @@
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
-    height: 30px;
+    height: 20px;
     cursor: pointer;
     z-index: 10;
 }
@@ -67,12 +67,13 @@
     transition: all 0.3s ease;
 }
 
+/* Transformations for the "X" effect */
 .hamburger .line.open:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
 
 .hamburger .line.open:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* Hide the middle line */
 }
 
 .hamburger .line.open:nth-child(3) {
@@ -111,7 +112,7 @@
 
     /* Show the hamburger icon on mobile */
     .hamburger {
-        display: block;
+        display: flex;
         position: absolute;
         right: 1rem; /* Position hamburger on the right */
     }

@@ -54,3 +54,10 @@ main {
   color: #306F5D;
   font-weight: 700;  
 }
+
+/* Media Query for Mobile (Max width: 480px) */
+@media (max-width: 480px) {
+  .intro-wrapper {
+    margin-bottom: 0;
+  }
+}

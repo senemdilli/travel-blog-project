@@ -22,10 +22,10 @@
 /* Media Query for Mobile (Max width: 480px) */
 @media (max-width: 480px) {
     .article {
-        width: 250px; /* Smaller width on mobile */
-        height: 150px;
-        min-width: 350px;
-        min-height: 250px;
+        width: 200px; /* Smaller width on mobile */
+        height: 140px;
+        min-width: 300px;
+        min-height: 210px;
     }
 
     .assets img {

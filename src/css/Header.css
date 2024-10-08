@@ -14,3 +14,10 @@
     font-family: var(--font-title);
     text-align: center;
 }
+
+/* Media Query for Mobile (Max width: 480px) */
+@media (max-width: 480px) {
+    .header-wrapper {
+        padding: 15px;
+    }
+}
